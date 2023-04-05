@@ -2,6 +2,9 @@
   "name": "ailingual",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^4.12.0",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
