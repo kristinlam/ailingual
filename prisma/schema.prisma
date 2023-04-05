@@ -6,3 +6,25 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Card {
+  id            Int      @id @default(autoincrement())
+  type          CardType
+  label         CardLabel?
+  prompt        String
+  prompt_zh     String
+  prompt_py     String
+  difficulty    Int
+}
+
+enum CardType {
+  QUESTION
+  ACTION
+}
+
+enum CardLabel {
+  IDENTITY
+  LIFE_EVENTS
+  WISDOM
+  RELATIONSHIPS
+}
